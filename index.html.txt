@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'Gotham';
+            src: url('fonts/Gotham.woff2') format('woff2'),
+                 url('fonts/Gotham.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: black;
+            margin: 0;
+            color: white;
+            font-family: 'Gotham', Arial, sans-serif; /* Fallback fonts */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.5); /* Gray with transparency */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000; /* Ensure it stays on top of content */
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Distributes space between button and title */
+            width: 100%;
+            max-width: 1200px; /* Optional max-width for better alignment */
+            margin: 0 auto;
+            padding: 0 20px; /* Optional padding for better spacing */
+        }
+
+        .button {
+            background-color: rgba(200, 200, 200, 0.7); /* Light gray with transparency */
+            color: black;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Gotham', Arial, sans-serif;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column; /* Stack dashes vertically */
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 60px; /* Adjust width as needed */
+            height: 80px; /* Adjust height as needed */
+            position: relative; /* Positioning for dropdown */
+        }
+
+        .button span {
+            display: block;
+            margin: 2px 0; /* Space between dashes */
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: rgba(200, 200, 200, 0.9); /* Light gray with transparency */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for dropdown */
+            z-index: 1000; /* Ensure it appears above other content */
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: black;
+            text-decoration: none;
+            font-family: 'Gotham', Arial, sans-serif;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .dropdown a:hover {
+            background-color: rgba(150, 150, 150, 0.7); /* Hover effect */
+        }
+
+        .button:hover .dropdown {
+            display: block; /* Show dropdown on hover */
+        }
+
+        .section {
+            height: 100vh; /* Full viewport height */
+            width: 100vw; /* Full viewport width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .about, .supported-games, .socials {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background for sections */
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .socials .discord-button {
+            background-color: rgba(0, 0, 0, 0.8); /* Dark button background */
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 24px; /* Adjust icon size */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .socials .discord-button i {
+            margin: 0;
+        }
+
+        .supported-games ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .supported-games li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .script-button {
+            background-color: red; /* Red background for the button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Gotham', Arial, sans-serif;
+            font-size: 18px;
+            margin-top: 20px; /* Space above the button */
+        }
+    </style>
+    <title>NoobZ</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>NoobZ</h1>
+            <button class="button">
+                <span>—</span>
+                <span>—</span>
+                <span>—</span>
+                <div class="dropdown">
+                    <a href="#about">NoobZ Information</a>
+                    <a href="#supported-games">Supported Games</a>
+                    <a href="#socials">Socials</a>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <section id="about" class="section about">
+        <h2>NoobZ Information</h2>
+        <p>NoobZ is a script for Roblox with multiple games supported, we offer the best functions for your gameplay.</p>
+        <button class="script-button">SCRIPT</button>
+    </section>
+
+    <section id="supported-games" class="section supported-games">
+        <h2>Supported Games</h2>
+        <ul>
+            <li>None yet lol</li>
+        </ul>
+    </section>
+
+    <section id="socials" class="section socials">
+        <h2>Socials</h2>
+        <button class="discord-button">
+            <i class="fab fa-discord"></i> <!-- Discord icon -->
+        </button>
+    </section>
+</body>
+</html>
